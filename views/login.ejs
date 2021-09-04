@@ -1,0 +1,22 @@
+<%- include('partials/nav') -%>
+<body>
+  <div>
+    <form action="/users/login" method="POST">
+      <h2>Login</h2>
+      <hr />
+      <%- include ('./partials/messages') %>
+
+      <div>
+        <input type="email" name="email" placeholder="Email" />
+      </div>
+      <br />
+      <div>
+        <input type="password" name="password" placeholder="Password" />
+      </div>
+      <br />
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,49 @@
+<%- include('partials/nav') -%>
+<body>
+  <div>
+    <form action="/users/register" method="POST">
+      <h2>Register</h2>
+      <hr />
+      <%- include ('./partials/messages') %>
+      <div>
+        <input
+          placeholder="Name"
+          type="name"
+          name="name"
+          value="<%= typeof name != 'undefined' ? name : '' %>"
+        />
+      </div>
+      <br />
+      <div>
+        <input
+          placeholder="Email"
+          type="email"
+          name="email"
+          value="<%= typeof email != 'undefined' ? email : '' %>"
+        />
+      </div>
+      <br />
+      <div>
+        <input
+          placeholder="Password"
+          type="password"
+          name="password"
+          value="<%= typeof password != 'undefined' ? password : '' %>"
+        />
+      </div>
+      <br />
+      <div>
+        <input
+          placeholder="Confirm password"
+          type="password"
+          name="password2"
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+        />
+      </div>
+      <br />
+      <div>
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
