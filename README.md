@@ -5,7 +5,7 @@ Hello, this is login and register system.
 ```
 PORT=your own localhost port
 DATABASE=your local url db or cluster url (only mongodb url)
-SECRET_KEY=your secret key
+SECRET=your secret key
 ```
 
 - Install packages: 
