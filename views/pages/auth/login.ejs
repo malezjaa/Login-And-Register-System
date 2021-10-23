@@ -1,0 +1,54 @@
+<h1>Logowanie</h1>
+
+<form method="post">
+	<div class="mb-3">
+		<label for="email" class="form-label">Email</label>
+
+		<input
+			type="email"
+			class="form-control"
+			name="email"
+			value="<%= form.email %>"
+			id="email"
+			required
+		/>
+	</div>
+
+	<label for="password" class="form-label">Password</label>
+	<div class="input-group mb-3">
+		<input
+			type="password"
+			class="form-control"
+			name="password"
+			value="<%= form.password %>"
+			id="password"
+			required
+			autocomplete="off"
+		/>
+		<button class="input-group-text" id="show-password" type="button">
+			Show Password
+		</button>
+	</div>
+
+	<button type="submit" class="btn btn-outline-primary">Login</button>
+</form>
+
+<% if (errors) { %>
+<br />
+<div class="alert alert-danger">Wrong email or password!</div>
+<% } %>
+
+<script>
+	const showPass = document.querySelector('#show-password')
+	const input = document.querySelector('#password')
+
+	const showPassword = () => {
+		if (input.type == 'password') {
+			input.type = 'text'
+		} else if (input.type == 'text') {
+			input.type = 'password'
+		}
+	}
+
+	showPass.addEventListener('click', showPassword)
+</script>
